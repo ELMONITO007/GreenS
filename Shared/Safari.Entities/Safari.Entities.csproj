@@ -39,8 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auditor\Auditor.cs" />
+    <Compile Include="Auditor\Horarios.cs" />
     <Compile Include="Cita.cs" />
     <Compile Include="EntityBase.cs" />
+    <Compile Include="Auditor\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

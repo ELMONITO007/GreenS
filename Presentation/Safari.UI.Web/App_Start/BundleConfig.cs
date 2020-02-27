@@ -1,31 +1,30 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Safari.UI.Web
+namespace WebApplication2
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
+        // Para obtener más información sobre las uniones, visite https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+   
+                       bundles.Add(new StyleBundle("~/bundles/css")
+                .Include(
+                        "~/Content/css/creative.min.css",
+                        "~/Content/vendor/magnific-popup/magnific-popup.css",
+                        "~/Content/vendor/fontawesome-free/css/all.min.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
+           
+            bundles.Add(new ScriptBundle("~/bundles/js").Include(
 
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+                        "~/Content/vendor/jquery/jquery.min.js",
+                        "~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js",
+                        "~/Content/vendor/jquery-easing/jquery.easing.min.js",
+                        "~/Content/vendor/magnific-popup/jquery.magnific-popup.min.js",
+                        "~/Content/js/creative.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap_Orange.css",
-                      "~/Content/site.css"));
         }
     }
 }
